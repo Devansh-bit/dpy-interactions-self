@@ -751,7 +751,7 @@ async def _get_build_number(session):  # Thank you Discord-S.C.U.M
         build_request = await session.get(build_url, headers={'Accept-Encoding': 'gzip, deflate'}, timeout=7)
         build_file = await build_request.text()
         build_index = build_file.find('buildNumber') + 14
-        return int(build_file[build_index:build_index + 6])
+        return 103016
     except asyncio.TimeoutError:
         log.warning('Could not fetch client build number.')
         return 103016
